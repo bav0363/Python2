@@ -25,3 +25,25 @@ var31 = set([int(i) for i in var3.split()])
 result_list = sorted(var21.intersection(var31))
 print(*result_list)
 
+# предлагаемое решение из автотеста 
+
+mol = [int(x) for x in var1.split()]
+n = mol[0]
+m = mol[1]
+set_1 = set()
+set_2 = set()
+list_1 = list()
+a = [int(x) for x in var2.split()]
+k = set(a)
+for i in k:
+   set_1.add(i)
+b = [int(x) for x in var3.split()]
+k1 = set(b)
+for i in k1:
+   set_2.add(i)
+lok = set_1 & set_2
+kool = list(lok)
+kool.sort()
+for i in kool:
+   print(i, end=' ')
+
