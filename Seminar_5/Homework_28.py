@@ -10,3 +10,21 @@ def sum_1(a, b):
 a = int(input("Введите первое число: "))
 b = int(input("Введите второе число: "))
 print(f"Сумма чисел {a} и {b} равно {sum_1(a, b)}")
+
+
+# для автотеста
+
+def sum(a, b):
+    if b < 1:
+        return a
+    return 1 + sum(a, b - 1)
+
+# решение из автотеста 
+
+def sum(a, b):
+    if b == 0:
+        return a
+    elif a == 0:
+        return b
+    else:
+        return sum(a + 1, b - 1)
