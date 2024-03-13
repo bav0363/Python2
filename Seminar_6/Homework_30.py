@@ -18,3 +18,23 @@ def progressive(first_element, step, amount_elements):
 
 
 print(progressive(first_element, step, amount_elements))
+
+# для автотеста 
+
+#a1 = 2
+#d = 3
+#n = 4
+
+def progressive(a1, d, n):
+    if n < 2:
+        return a1
+    print(a1, end="\n")
+    return progressive(a1 + d, d, n - 1)
+
+
+print(progressive(a1, d, n))
+
+#решение из автотеста
+
+for i in range(n):
+  print(a1 + i * d)
